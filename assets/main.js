@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 })
                 .catch(error => {
                     console.error('Error loading tab content:', error);
-                    tabContent.innerHTML = '<p class="text-red-500">Error loading content</p>';
+                    //tabContent.innerHTML = '<p class="text-red-500">Error loading content</p>';
                 });
         }
     }

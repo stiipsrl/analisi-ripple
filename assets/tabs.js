@@ -1,29 +1,29 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Load content for tabs
-    loadTabContent('overview', 'views/overview-content.html');
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Load content for tabs
+//     loadTabContent('overview', 'views/overview-content.html');
     
-    // Add click handlers to tab buttons
-    document.querySelectorAll('.tab-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            const tabId = button.dataset.tab;
+//     // Add click handlers to tab buttons
+//     document.querySelectorAll('.tab-btn').forEach(button => {
+//         button.addEventListener('click', () => {
+//             const tabId = button.dataset.tab;
             
-            // Remove active class from all tabs
-            document.querySelectorAll('.tab-btn').forEach(btn => 
-                btn.classList.remove('active')
-            );
-            document.querySelectorAll('.tab-content').forEach(content => 
-                content.classList.remove('active')
-            );
+//             // Remove active class from all tabs
+//             document.querySelectorAll('.tab-btn').forEach(btn => 
+//                 btn.classList.remove('active')
+//             );
+//             document.querySelectorAll('.tab-content').forEach(content => 
+//                 content.classList.remove('active')
+//             );
             
-            // Add active class to clicked tab
-            button.classList.add('active');
-            document.getElementById(tabId).classList.add('active');
+//             // Add active class to clicked tab
+//             button.classList.add('active');
+//             document.getElementById(tabId).classList.add('active');
             
-            // Load content if not already loaded
-            loadTabContent(tabId, `${tabId}-content.html`);
-        });
-    });
-});
+//             // Load content if not already loaded
+//             loadTabContent(tabId, `${tabId}-content.html`);
+//         });
+//     });
+// });
 
 function loadTabContent(tabId, contentUrl) {
     const tabContent = document.getElementById(tabId);
